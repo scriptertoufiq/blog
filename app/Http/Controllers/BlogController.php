@@ -12,7 +12,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json([
+            "this from blog controller"
+        ]);
     }
 
     /**
@@ -28,7 +30,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
