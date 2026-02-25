@@ -23,6 +23,6 @@ class CacheBlogUpdated implements ShouldQueue
     public function handle(BlogUpdated $event): void
     {
         $cacheKey = "blog-{$event->blog->id}";
-        Cache::put($cacheKey, $event->blog, 60);
+        Cache::put($cacheKey, $event->blog, now()->addHour());
     }
 }

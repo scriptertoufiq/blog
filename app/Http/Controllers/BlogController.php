@@ -72,7 +72,7 @@ class BlogController extends Controller
             ], 200);
         }else{
             $blog = Blog::findOrFail($id)->toArray();
-            Cache::put($cacheKey, $blog, 60);
+            Cache::put($cacheKey, $blog, now()->addHour());
             return response()->json([
                 'data' => $blog,
                 'source' => 'database'
