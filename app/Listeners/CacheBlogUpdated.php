@@ -26,3 +26,4 @@ class CacheBlogUpdated implements ShouldQueue
         Cache::put($cacheKey, $event->blog, now()->addHour());
     }
 }
+
